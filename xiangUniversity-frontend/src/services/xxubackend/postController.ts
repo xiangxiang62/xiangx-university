@@ -79,7 +79,7 @@ export async function updatePostUsingPost(
   body: API.PostUpdateRequest,
   options?: { [key: string]: any },
 ) {
-  return request<API.BaseResponseboolean>('注册/post/update', {
+  return request<API.BaseResponseboolean>('/post/update', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

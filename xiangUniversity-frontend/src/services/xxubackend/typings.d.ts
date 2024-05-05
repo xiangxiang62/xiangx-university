@@ -5,6 +5,12 @@ declare namespace API {
     message?: string;
   };
 
+  type BaseResponseint = {
+    code?: number;
+    data?: number;
+    message?: string;
+  };
+
   type BaseResponseListPost = {
     code?: number;
     data?: Post[];
@@ -255,10 +261,10 @@ declare namespace API {
     place?: string;
     reviewMessage?: string;
     reviewStatus?: number;
-    thumbNum?: any;
+    thumbNum?: number;
     updateTime?: string;
     userId?: number;
-    viewNum?: any;
+    viewNum?: number;
   };
 
   type PostAddRequest = {
@@ -290,6 +296,7 @@ declare namespace API {
 
   type User = {
     createTime?: string;
+    emailCode?: number;
     gender?: number;
     id?: number;
     isDelete?: number;
@@ -310,9 +317,21 @@ declare namespace API {
     userRole?: string;
   };
 
+  type userLoginByEmailUsingPOSTParams = {
+    /** userEmailAccount */
+    userEmailAccount: string;
+  };
+
   type UserLoginRequest = {
     userAccount?: string;
     userPassword?: string;
+  };
+
+  type userLoginUseEmailUsingPOSTParams = {
+    /** userPassword */
+    userPassword: string;
+    /** emailCode */
+    emailCode: string;
   };
 
   type UserRegisterRequest = {

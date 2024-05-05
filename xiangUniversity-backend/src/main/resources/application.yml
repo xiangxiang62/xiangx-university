@@ -8,6 +8,29 @@ spring:
   session:
     timeout: 86400
     store-type: none
+  mail:
+    #smtp服务主机  qq邮箱则为smtp.qq.com
+    host: smtp.qq.com
+    #服务协议
+    protocol: smtp
+    # 编码集
+    default-encoding: UTF-8
+    #发送邮件的账户
+    username: xxx@qq.com
+    #授权码
+    password: xxxxx
+    test-connection: true
+    properties:
+      mail:
+        smtp:
+          connectiontimeout: 5000
+          timeout: 3000
+          auth: true
+          writetimeout: 3000
+          starttls:
+            enable: true
+            required: true
+    port: 587
   # redis 配置
 #  redis:
 #    port: 6379

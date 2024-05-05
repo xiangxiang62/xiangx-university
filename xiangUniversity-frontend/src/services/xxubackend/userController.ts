@@ -97,6 +97,36 @@ export async function userLoginUsingPost(
   });
 }
 
+/** userLoginByEmail POST /user/loginByEmail */
+export async function userLoginByEmailUsingPost(
+  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+  params: API.userLoginByEmailUsingPOSTParams,
+  options?: { [key: string]: any },
+) {
+  return request<API.BaseResponseint>('/user/loginByEmail', {
+    method: 'POST',
+    params: {
+      ...params,
+    },
+    ...(options || {}),
+  });
+}
+
+/** userLoginUseEmail POST /user/loginUseEmail */
+export async function userLoginUseEmailUsingPost(
+  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+  params: API.userLoginUseEmailUsingPOSTParams,
+  options?: { [key: string]: any },
+) {
+  return request<API.BaseResponseUserVO>('/user/loginUseEmail', {
+    method: 'POST',
+    params: {
+      ...params,
+    },
+    ...(options || {}),
+  });
+}
+
 /** userLogout POST /user/logout */
 export async function userLogoutUsingPost(options?: { [key: string]: any }) {
   return request<API.BaseResponseboolean>('/user/logout', {
